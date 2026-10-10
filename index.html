@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baran Tower - Resident Portal</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                        darkBg: '#0F172A',
+                        cardBg: '#1E293B'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-darkBg text-slate-100 font-sans min-h-screen pb-12">
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gold text-slate-900 flex items-center justify-center font-bold text-xl rounded-lg">BT</div>
+                <div>
+                    <h1 class="font-bold text-lg leading-none text-gold">BARAN TOWER</h1>
+                    <span class="text-xs text-slate-400">Residential Portal</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="text-xs text-slate-400 block">Logged in as</span>
+                <span class="text-sm font-semibold text-slate-200"><i class="fa-solid fa-user text-gold mr-1"></i> Apt 14B</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl mx-auto px-4 mt-6">
+
+        <!-- Navigation Tabs -->
+        <nav class="flex overflow-x-auto space-x-2 border-b border-slate-800 pb-2 mb-6 scrollbar-none">
+            <button onclick="switchTab('cinema')" id="tab-cinema" class="tab-btn active-tab flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all bg-gold text-slate-900">
+                <i class="fa-solid fa-film"></i><span>Cinema</span>
+            </button>
+            <button onclick="switchTab('pool')" id="tab-pool" class="tab-btn flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all bg-cardBg text-slate-300 hover:bg-slate-700">
+                <i class="fa-solid fa-water-ladder"></i><span>Family Pool</span>
+            </button>
+            <button onclick="switchTab('dining')" id="tab-dining" class="tab-btn flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all bg-cardBg text-slate-300 hover:bg-slate-700">
+                <i class="fa-solid fa-utensils"></i><span>Dining & Coffee</span>
+            </button>
+            <button onclick="switchTab('payments')" id="tab-payments" class="tab-btn flex items-center space-x-2 px-5 py-2.5 rounded-lg text-sm font-semibold transition-all bg-cardBg text-slate-300 hover:bg-slate-700">
+                <i class="fa-solid fa-credit-card"></i><span>Payments</span>
+            </button>
+        </nav>
+
+        <!-- SECTIONS -->
+
+        <!-- 1. Cinema Schedule -->
+        <section id="section-cinema" class="space-y-6">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold text-slate-100"><i class="fa-solid fa-film text-gold mr-2"></i>Private Cinema Screenings</h2>
+                <span class="text-xs bg-slate-
